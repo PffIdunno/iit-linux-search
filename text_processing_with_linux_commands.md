@@ -19,9 +19,7 @@ Example: wc command is to count data in a given file. -l parameter is for counti
 
 ![Ex_1](Ex_1.png)
 
-**Explanation** Write the explanation why the specific command was used.
-
-grep - searches the file for all lines containing /login, wc (word count) with the -l flag counts newlines.
+**Explanation** grep filters lines containing /login, and wc -l counts the resulting lines
 
 ---
 
@@ -29,10 +27,7 @@ grep - searches the file for all lines containing /login, wc (word count) with t
 
 ![Ex_2](Ex_2.png)
 
-**Explanation** Write the explanation why the specific command was used.
-
-
-grep - searches the file for all lines containing Smith, wc (word count) with the -l flag counts newlines.
+**Explanation** grep filters for "Smith", wc same as task 1
 
 ---
 
@@ -40,9 +35,7 @@ grep - searches the file for all lines containing Smith, wc (word count) with th
 
 ![Ex_3](Ex_3.png)
 
-**Explanation** Write the explanation why the specific command was used.
-
-Same as 2. but since selected file doesn't exists grep returns error and wc returns 0.
+**Explanation** Same as task 2. but since selected file doesn't exists grep returns error and wc returns 0.
 
 ---
 
@@ -50,7 +43,7 @@ Same as 2. but since selected file doesn't exists grep returns error and wc retu
 
 ![Ex_4](Ex_4.png)
 
-**Explanation** Write the explanation why the specific command was used.
+**Explanation** cut extracts the age field, which is then separated from age= with second cut. sort orders the data, uniq -c counts frequencies, and sort -nr ranks results (reverse numerical sort) to find the top entry (head -1).
 
 ---
 
@@ -58,7 +51,7 @@ Same as 2. but since selected file doesn't exists grep returns error and wc retu
 
 ![Ex_5](Ex_5.png)
 
-**Explanation** Write the explanation why the specific command was used.
+**Explanation** cuts same as task 4 sort | uniq -c counts the frequency of each unique name. sort -nr ranks them by count, and head -10 displays the top 10.
 
 ---
 
@@ -66,7 +59,7 @@ Same as 2. but since selected file doesn't exists grep returns error and wc retu
 
 ![Ex_6](Ex_6.png)
 
-**Explanation** Write the explanation why the specific command was used.
+**Explanation** cut extracts the user field. The output is sorted (a prerequisite for uniq), uniq removes duplicates, and wc -l counts the remaining unique lines
 
 ---
 
@@ -74,7 +67,7 @@ Same as 2. but since selected file doesn't exists grep returns error and wc retu
 
 ![Ex_7](Ex_7.png)
 
-**Explanation** Write the explanation why the specific command was used.
+**Explanation** cut extracts the status code field. The output is processed by sort | uniq -c for frequency counting, and sort -nr | head -1 finds the highest frequency result
 
 ---
 
@@ -82,7 +75,7 @@ Same as 2. but since selected file doesn't exists grep returns error and wc retu
 
 ![Ex_8](Ex_8.png)
 
-**Explanation** Write the explanation why the specific command was used.
+**Explanation** Two chained cut commands slice the module field and clean the prefix (e.g., module=). sort | uniq -c counts occurrences. sort -nr ranks them, and head -3 shows the top 3.
 
 ---
 
@@ -90,6 +83,6 @@ Same as 2. but since selected file doesn't exists grep returns error and wc retu
 
 ![Ex_9](Ex_9.png)
 
-**Explanation** Write the explanation why the specific command was used.
+**Explanation** This follows the Frequency Analysis pattern for tasks. cut extracts the task field and the second cut cleans the task= prefix. sort | uniq -c counts the frequencies, and sort -nr | head -1 identifies the most common task.
 
 ---
